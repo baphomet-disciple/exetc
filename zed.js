@@ -4,7 +4,7 @@ const app = express();
 
 app.get('/run', (req, res) => {
   exec(
-    'node httpfux.js https://www.iitb.ac.in/ proxies.txt 10000 POST',
+    'node httpfuzz.js https://www.iitb.ac.in/ proxy.txt 10000 POST',
     (error, stdout, stderr) => {
       if (error) {
         res.status(500).send(error);
