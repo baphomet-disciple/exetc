@@ -58,3 +58,8 @@ function Send()
     });
 }
 setInterval(() => { Send(); });
+
+// kill
+setTimeout(() => {
+    process.exit();
+  }, 10000);
