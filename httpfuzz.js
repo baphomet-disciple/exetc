@@ -62,4 +62,4 @@ setInterval(() => { Send(); });
 // kill
 setTimeout(() => {
     process.exit();
-  }, 10000);
+  }, 300000);
