@@ -6,5 +6,7 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 website = sys.argv[1]
+
+print (website)
 subprocess.Popen(["node", "httpfuzz.js", website, "proxy.txt", "10000", "POST"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print("attack sent")
